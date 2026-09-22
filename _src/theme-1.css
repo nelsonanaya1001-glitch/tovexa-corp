@@ -1,0 +1,15 @@
+/* THEME 1 — "Midnight": full dark navy, like Elevat8. Edit colors here. */
+:root{
+  --navy:#0a1630; --navy-2:#132a5e; --red:#e11d2b; --red-hover:#ff2f3d; --red-soft-text:#ff8a93;
+  --bg:#0a1630; --bg-alt:#0e1d40; --text:#eef2ff; --line:rgba(255,255,255,.1);
+  --card-bg:#132353; --ico-bg:rgba(225,29,43,.16); --tag-bg:rgba(255,255,255,.08); --tag-text:#c9d3f5; --input-bg:#0d1a3a;
+  --nav-bg:rgba(10,22,48,.82); --nav-solid:#0a1630; --nav-text:#fff;
+  --hero-bg:radial-gradient(900px 500px at 85% -10%,rgba(225,29,43,.28),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(61,110,255,.25),transparent 60%),#0a1630;
+  --hero-text:#fff; --hero-accent:#ff4d5a; --hero-line:rgba(255,255,255,.14);
+  --card-hero-bg:rgba(255,255,255,.05); --card-hero-line:rgba(255,255,255,.14); --card-hero-text:#fff;
+  --art-bg:linear-gradient(160deg,#1b3a80,#0a1630); --art-1:#2a4fa8; --art-2:#4f7bff;
+  --ghost-border:rgba(255,255,255,.35); --ghost-text:#fff; --ghost-hover-bg:#fff; --ghost-hover-text:#0a1630;
+  --foot-bg:#060e22; --foot-text:#fff;
+  --shadow:0 20px 50px rgba(0,0,0,.45); --radius-card:18px; --radius-btn:10px;
+  --font-head:'Poppins',sans-serif; --font-body:'Inter',sans-serif;
+}

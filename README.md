@@ -1,12 +1,18 @@
-# Tovexa One Corp — Website
+# Tovexa One Corp — Landing Page
 
-Three demo directions, all plain HTML/CSS (no build step). Open `index.html` to pick one.
+Single-page wholesale/sourcing landing page (same structure as Voltiva Wholesale and Elevat8 Sourcing):
+nav → hero → product categories → about → fulfillment features → FAQ → contact form → footer.
 
-| Folder | Style |
+Three looks to choose from — open `index.html` to compare:
+
+| Folder | Look |
 |---|---|
-| `demo-1-editorial/` | Editorial masthead — cream paper, navy + red, magazine feel |
-| `demo-2-bento/` | Dark navy bento-grid hero, tabbed services section |
-| `demo-3-kinetic/` | Red marquee typography hero, horizontal scroll, sticky stats |
+| `demo-1/` | **Midnight** — full dark navy, red accents (like Elevat8) |
+| `demo-2/` | **Paper** — white page, navy serif headlines, red CTAs (like Voltiva) |
+| `demo-3/` | **Banner** — angled navy→red hero band, light body |
 
-Colors live in the `:root` block at the top of each `index.html`.
-Once you pick one, delete the other two folders and move the winner's `index.html` to the repo root.
+## Editing
+- Each `demo-N/index.html` is self-contained (no build step). Colors and fonts are in the `:root` block at the top.
+- `_src/` holds the shared pieces the demos were built from (`body.html` content, `base.css` layout, `theme-N.css`). Once you pick a demo you can delete `_src/` and the other two folders.
+- Placeholders to replace: phone `(305) 000-0000`, address `1234 NW Example Ave`, email `info@tovexaone.com`.
+- The contact form currently just shows an alert — wire it to Formspree / your API when ready.
