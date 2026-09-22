@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tovexa One Corp — Kinetic</title>
+<!-- Demo 3: Marquee/kinetic type hero + horizontal scroll section + sticky narrative. Red-dominant with navy. -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#c8141e; --red-dark:#8f0d15; --navy:#0b1633; --navy-2:#142452; --white:#fbf9f6; --muted:rgba(251,249,246,.65); --line:rgba(251,249,246,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Archivo',system-ui,sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .mono{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 32px;mix-blend-mode:difference}
+  header .logo{font-weight:900;font-size:18px;letter-spacing:-.02em}
+  header nav{display:flex;gap:24px}
+  header nav a{font-family:'DM Mono';font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+
+  /* Kinetic hero */
+  .hero{background:var(--red);min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+  .line{white-space:nowrap;font-weight:900;font-size:clamp(80px,17vw,240px);line-height:.86;letter-spacing:-.05em;text-transform:uppercase;display:flex}
+  .line span{display:inline-block;padding-right:.35em;animation:march 22s linear infinite}
+  .line.rev span{animation-direction:reverse;animation-duration:28s}
+  .line.outline span{color:transparent;-webkit-text-stroke:2px var(--white)}
+  .line.navy{color:var(--navy)}
+  @keyframes march{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+  .hero .meta{position:absolute;bottom:32px;left:32px;right:32px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .hero .meta p{max-width:38ch;font-weight:500;font-size:18px;line-height:1.35}
+  .hero .btn{background:var(--navy);color:var(--white);padding:16px 26px;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
+  .hero .btn:hover{background:var(--white);color:var(--navy)}
+
+  /* Horizontal scroll strip */
+  .strip{padding:80px 0 40px}
+  .strip .head{padding:0 32px;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px}
+  .strip h2{font-size:clamp(28px,4vw,52px);font-weight:900;letter-spacing:-.03em;text-transform:uppercase}
+  .track{display:flex;gap:16px;padding:0 32px 24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .track::-webkit-scrollbar{display:none}
+  .slide{flex:0 0 min(78vw,420px);scroll-snap-align:start;background:var(--navy-2);border:1px solid var(--line);padding:28px;min-height:360px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}
+  .slide:hover{background:var(--red);border-color:var(--red)}
+  .slide .idx{font-family:'DM Mono';font-size:12px;opacity:.7}
+  .slide h3{font-size:30px;font-weight:900;letter-spacing:-.02em;line-height:1;margin-bottom:12px;text-transform:uppercase}
+  .slide p{font-size:15px;color:var(--muted);line-height:1.5}
+  .slide:hover p{color:var(--white)}
+  .slide .arrow{font-size:28px;font-weight:900}
+
+  /* Sticky narrative */
+  .story{display:grid;grid-template-columns:1fr 1fr;padding:80px 32px;gap:64px;border-top:1px solid var(--line)}
+  .story .pin{position:sticky;top:120px;align-self:start}
+  .story .pin .big{font-size:clamp(64px,10vw,140px);font-weight:900;line-height:.9;letter-spacing:-.05em;color:var(--red)}
+  .story .pin .big small{display:block;font-size:14px;font-family:'DM Mono';color:var(--muted);letter-spacing:.1em;margin-top:14px;text-transform:uppercase}
+  .step{padding:48px 0;border-bottom:1px solid var(--line)}
+  .step h3{font-size:28px;font-weight:700;margin-bottom:10px;letter-spacing:-.02em}
+  .step p{color:var(--muted);line-height:1.6;max-width:48ch}
+
+  footer{background:var(--red);padding:64px 32px 32px}
+  footer .big{font-size:clamp(40px,8vw,110px);font-weight:900;letter-spacing:-.05em;text-transform:uppercase;line-height:.9;margin-bottom:32px}
+  footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(251,249,246,.3);padding-top:20px}
+
+  @media(max-width:800px){
+    .story{grid-template-columns:1fr}.story .pin{position:static}
+    header nav{display:none}
+  }
+</style>
+</head>
+<body>
+<header><div class="logo">TOVEXA ONE</div><nav><a href="#work">Work</a><a href="#story">Story</a><a href="#contact">Contact</a></nav></header>
+
+<section class="hero">
+  <div class="line"><span>Tovexa One Corp — Tovexa One Corp — </span><span>Tovexa One Corp — Tovexa One Corp — </span></div>
+  <div class="line rev outline"><span>Strategy · Engineering · Operations · </span><span>Strategy · Engineering · Operations · </span></div>
+  <div class="line navy"><span>Move Faster — Move Faster — </span><span>Move Faster — Move Faster — </span></div>
+  <div class="meta">
+    <p>One accountable team for the work that decides whether your company grows next year.</p>
+    <a class="btn" href="#contact">Start a project <span>→</span></a>
+  </div>
+</section>
+
+<section class="strip" id="work">
+  <div class="head"><h2>What we do</h2><span class="mono">scroll →</span></div>
+  <div class="track">
+    <div class="slide"><span class="idx">01</span><div><h3>Strategy</h3><p>Market mapping, growth roadmaps, and capital advisory tied to real numbers.</p></div><span class="arrow">→</span></div>
+    <div class="slide"><span class="idx">02</span><div><h3>Engineering</h3><p>Platform architecture and embedded product squads that ship every two weeks.</p></div><span class="arrow">→</span></div>
+    <div class="slide"><span class="idx">03</span><div><h3>Operations</h3><p>Process, vendors, and reporting that let leadership see clearly.</p></div><span class="arrow">→</span></div>
+    <div class="slide"><span class="idx">04</span><div><h3>AI &amp; Automation</h3><p>Practical automation across support, finance, and ops — with guardrails.</p></div><span class="arrow">→</span></div>
+    <div class="slide"><span class="idx">05</span><div><h3>Capital</h3><p>Fundraising narrative, models, and investor prep.</p></div><span class="arrow">→</span></div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="pin"><div class="big">140+<small>Projects delivered since 2026</small></div></div>
+  <div>
+    <div class="step"><h3>We start with the number that matters.</h3><p>Every engagement opens with one metric the leadership team agrees to move. Everything else is scoped to serve it.</p></div>
+    <div class="step"><h3>We embed, we don't hover.</h3><p>Our people sit inside your workflows and tools, so decisions happen in hours, not in weekly status calls.</p></div>
+    <div class="step"><h3>We leave things better documented than we found them.</h3><p>Clean handoffs, written playbooks, and systems your team can run without us.</p></div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="big">Let's build<br>the next one.</div>
+  <div class="row"><span class="mono">hello@tovexaone.com</span><span class="mono">© 2026 Tovexa One Corp</span></div>
+</footer>
+</body>
+</html>
