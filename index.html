@@ -59,10 +59,7 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.1;letter-spacing:-.02em}
 .hero h1{font-size:clamp(40px,5.4vw,66px);font-weight:800;margin-bottom:20px}
 .hero h1 em{font-style:normal;color:var(--hero-accent)}
 .hero p{font-size:18px;max-width:54ch;opacity:.85;margin-bottom:30px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
-.hero-stats{display:flex;gap:36px;list-style:none;border-top:1px solid var(--hero-line);padding-top:24px}
-.hero-stats b{display:block;font-family:var(--font-head);font-size:28px;font-weight:800}
-.hero-stats span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.65}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
 .hero-card{border-radius:var(--radius-card);background:var(--card-hero-bg);border:1px solid var(--card-hero-line);box-shadow:var(--shadow);padding:22px;color:var(--card-hero-text)}
 .hero-art{aspect-ratio:4/3;border-radius:calc(var(--radius-card) - 8px);background:var(--art-bg);position:relative;overflow:hidden;margin-bottom:18px}
 .art-box{position:absolute;border-radius:12px;background:var(--art-1);width:46%;height:52%;left:8%;bottom:10%}
@@ -129,8 +126,7 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.1;letter-spacing:-.02em}
   .links.open{display:flex}.links a{padding:12px 0}
   .burger{display:block}.nav-cta{display:none}
   .hero{padding:110px 0 60px}.hero-in,.split{grid-template-columns:1fr}.about-art{max-width:360px}
-  .grid-4,.grid-3{grid-template-columns:1fr}.sec{padding:64px 0}.form{grid-template-columns:1fr}.hero-stats{gap:22px}
-}
+  .grid-4,.grid-3{grid-template-columns:1fr}.sec{padding:64px 0}.form{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -150,7 +146,6 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.1;letter-spacing:-.02em}
       <h1>Sourced right.<br><em>Delivered on time.</em></h1>
       <p>Tovexa One Corp connects retailers, resellers, and online sellers with bulk and pallet inventory across Household Electronics, Beauty, and Toys — from South Florida to your dock.</p>
       <div class="actions"><a href="#products" class="btn btn-primary">Browse Categories</a><a href="#contact" class="btn btn-ghost">Contact Us</a></div>
-      <ul class="hero-stats"><li><b>3</b><span>Product lines</span></li><li><b>50+</b><span>Unit minimums</span></li><li><b>24h</b><span>Dispatch</span></li></ul>
     </div>
     <div class="hero-card">
       <div class="hero-art"><div class="art-box"></div><div class="art-box b"></div><div class="art-box c"></div></div>
