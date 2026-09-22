@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tovexa One Corp | Wholesale Electronics, Beauty, Health &amp; Toys</title>
-<meta name="description" content="Tovexa One Corp — wholesale distribution and product sourcing across Household Electronics, Beauty, Health, and Toys. Bulk and pallet orders, trade accounts only.">
+<title>Tovexa One Corp | Wholesale Household Electronics, Beauty &amp; Toys</title>
+<meta name="description" content="Tovexa One Corp — wholesale distribution and product sourcing across Household Electronics, Beauty, and Toys. Bulk and pallet orders, trade accounts only.">
 <!-- Tovexa One Corp — landing page. Colors/fonts in the :root block below. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -78,6 +78,7 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.1;letter-spacing:-.02em}
 .sec-head h2,.split h2{font-size:clamp(30px,3.6vw,44px);font-weight:800;margin-bottom:16px}
 .sec-head p{font-size:17px;opacity:.8}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius-card);padding:28px 24px;transition:.25s}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--red)}
 .ico{width:44px;height:44px;border-radius:12px;background:var(--ico-bg);color:var(--red);display:grid;place-items:center;font-size:20px;font-weight:800;margin-bottom:18px}
@@ -108,6 +109,8 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.1;letter-spacing:-.02em}
 .form input,.form textarea{font:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--input-bg);color:var(--text);letter-spacing:0;text-transform:none}
 .form input:focus,.form textarea:focus{outline:2px solid var(--red);border-color:transparent}
 .form .full{grid-column:1/-1}
+.form .ok{display:none;grid-column:1/-1;background:var(--ico-bg);color:var(--red);border-radius:8px;padding:12px 14px;font-size:14px;letter-spacing:0;text-transform:none;font-weight:500}
+.form .ok.show{display:block}
 .form small{font-size:12px;opacity:.6;letter-spacing:0;text-transform:none;font-weight:400}
 
 /* footer */
@@ -120,13 +123,13 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.1;letter-spacing:-.02em}
 .foot a:hover{opacity:1;color:var(--red-soft-text)}
 .foot-legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-top:22px;font-size:12px;opacity:.55}
 
-@media(max-width:960px){.grid-4{grid-template-columns:1fr 1fr}.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:960px){.grid-4,.grid-3{grid-template-columns:1fr 1fr}.foot-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){
   .links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;gap:0;background:var(--nav-solid);padding:10px 24px 20px;border-bottom:1px solid var(--line)}
   .links.open{display:flex}.links a{padding:12px 0}
   .burger{display:block}.nav-cta{display:none}
   .hero{padding:110px 0 60px}.hero-in,.split{grid-template-columns:1fr}.about-art{max-width:360px}
-  .grid-4{grid-template-columns:1fr}.sec{padding:64px 0}.form{grid-template-columns:1fr}.hero-stats{gap:22px}
+  .grid-4,.grid-3{grid-template-columns:1fr}.sec{padding:64px 0}.form{grid-template-columns:1fr}.hero-stats{gap:22px}
 }
 </style>
 </head>
@@ -145,9 +148,9 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.1;letter-spacing:-.02em}
     <div class="hero-copy">
       <div class="eyebrow">Wholesale &amp; Product Sourcing · Trade Accounts</div>
       <h1>Sourced right.<br><em>Delivered on time.</em></h1>
-      <p>Tovexa One Corp connects retailers, resellers, and online sellers with bulk and pallet inventory across Household Electronics, Beauty, Health, and Toys — from South Florida to your dock.</p>
+      <p>Tovexa One Corp connects retailers, resellers, and online sellers with bulk and pallet inventory across Household Electronics, Beauty, and Toys — from South Florida to your dock.</p>
       <div class="actions"><a href="#products" class="btn btn-primary">Browse Categories</a><a href="#contact" class="btn btn-ghost">Contact Us</a></div>
-      <ul class="hero-stats"><li><b>4</b><span>Product lines</span></li><li><b>50+</b><span>Unit minimums</span></li><li><b>24h</b><span>Dispatch</span></li></ul>
+      <ul class="hero-stats"><li><b>3</b><span>Product lines</span></li><li><b>50+</b><span>Unit minimums</span></li><li><b>24h</b><span>Dispatch</span></li></ul>
     </div>
     <div class="hero-card">
       <div class="hero-art"><div class="art-box"></div><div class="art-box b"></div><div class="art-box c"></div></div>
@@ -158,11 +161,10 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.1;letter-spacing:-.02em}
 
 <section class="sec" id="products">
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Our Product Categories</div><h2>Four lines, one purchase order</h2><p>Premium products across four high-demand categories, sourced from trusted suppliers and delivered in bulk or pallet quantities.</p></div>
-    <div class="grid-4">
+    <div class="sec-head"><div class="eyebrow">Our Product Categories</div><h2>Three lines, one purchase order</h2><p>Premium products across three high-demand categories, sourced from trusted suppliers and delivered in bulk or pallet quantities.</p></div>
+    <div class="grid-3">
       <article class="card"><div class="ico">⚡</div><h3>Household Electronics</h3><p>Smart home devices, major appliances, and consumer electronics sourced in bulk for resellers and retailers.</p><ul class="tags"><li>TVs &amp; Monitors</li><li>Smart Speakers</li><li>Tablets &amp; Phones</li><li>Kitchen Appliances</li><li>Security Cameras</li><li>Accessories</li></ul></article>
       <article class="card"><div class="ico">✦</div><h3>Beauty</h3><p>Premium skincare, cosmetics, and personal care in wholesale quantities for salons, boutiques, and online sellers.</p><ul class="tags"><li>Skincare Sets</li><li>Cosmetics</li><li>Hair Care</li><li>Fragrances</li><li>Nail Care</li><li>Grooming</li></ul></article>
-      <article class="card"><div class="ico">＋</div><h3>Health</h3><p>Vitamins, supplements, fitness gear, and wellness essentials for pharmacies, gyms, and e-commerce businesses.</p><ul class="tags"><li>Vitamins &amp; Supplements</li><li>Fitness Equipment</li><li>First Aid</li><li>Wellness Devices</li><li>Nutrition</li></ul></article>
       <article class="card"><div class="ico">▲</div><h3>Toys</h3><p>High-demand educational toys, games, and seasonal items available in pallet and bulk orders for retailers.</p><ul class="tags"><li>Educational Toys</li><li>Board Games</li><li>Action Figures</li><li>Outdoor Play</li><li>STEM Kits</li><li>Arts &amp; Crafts</li></ul></article>
     </div>
   </div>
@@ -227,13 +229,14 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.1;letter-spacing:-.02em}
         <dt>Account type</dt><dd>Trade only — resale certificate required</dd>
       </dl>
     </div>
-    <form class="form" onsubmit="event.preventDefault();alert('Thanks — we will reply within one business day.');this.reset()">
-      <label>Your name<input required placeholder="Jane Doe"></label>
-      <label>Company<input required placeholder="Acme Retail LLC"></label>
-      <label>Work email<input type="email" required placeholder="jane@acme.com"></label>
-      <label>Phone<input type="tel" placeholder="(305) 555-0100"></label>
-      <label class="full">What are you sourcing?<textarea rows="4" placeholder="Category, quantities, timeline…"></textarea></label>
+    <form class="form" id="contactForm" onsubmit="submitContact(event)">
+      <label>Your name<input id="c-name" required placeholder="Jane Doe"></label>
+      <label>Company<input id="c-company" required placeholder="Acme Retail LLC"></label>
+      <label>Work email<input id="c-email" type="email" required placeholder="jane@acme.com"></label>
+      <label>Phone<input id="c-phone" type="tel" placeholder="(305) 555-0100"></label>
+      <label class="full">What are you sourcing?<textarea id="c-message" rows="4" placeholder="Category, quantities, timeline…"></textarea></label>
       <button class="btn btn-primary full" type="submit">Send Message</button>
+      <p class="ok full" id="contactSuccess">Thanks — your email app should open with the message ready to send. We reply within one business day.</p>
       <small class="full">Tovexa One Corp sells to businesses only. A resale certificate or business license is required before an account is activated.</small>
     </form>
   </div>
@@ -241,14 +244,33 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.1;letter-spacing:-.02em}
 
 <footer class="foot">
   <div class="wrap foot-grid">
-    <div><div class="logo"><span class="logo-mark">T1</span><span><b>TOVEXA ONE</b><small>CORP · WHOLESALE SUPPLY</small></span></div><p>Wholesale distribution and product sourcing for Household Electronics, Beauty, Health, and Toys. Trade accounts only — not a consumer storefront.</p></div>
-    <div><h4>Categories</h4><a href="#products">Household Electronics</a><a href="#products">Beauty</a><a href="#products">Health</a><a href="#products">Toys</a></div>
+    <div><div class="logo"><span class="logo-mark">T1</span><span><b>TOVEXA ONE</b><small>CORP · WHOLESALE SUPPLY</small></span></div><p>Wholesale distribution and product sourcing for Household Electronics, Beauty, and Toys. Trade accounts only — not a consumer storefront.</p></div>
+    <div><h4>Categories</h4><a href="#products">Household Electronics</a><a href="#products">Beauty</a><a href="#products">Toys</a></div>
     <div><h4>Company</h4><a href="#about">About Tovexa</a><a href="#wholesale">Wholesale Program</a><a href="#contact">Contact</a><a href="#contact">Request a Catalog</a></div>
     <div><h4>Wholesale Desk</h4><a href="mailto:info@tovexaone.com">info@tovexaone.com</a><a href="tel:+13050000000">(305) 000-0000</a><span>Miami, FL 33100</span><span>Mon–Fri, 8am–6pm ET</span></div>
   </div>
   <div class="wrap foot-legal"><span>© 2026 Tovexa One Corp. All rights reserved.</span><span>Trade accounts only · Resale certificate required</span></div>
 </footer>
 <script>
+  /* Where contact-form submissions go. Change this one line to reroute the inbox. */
+  const INBOX = 'info@tovexaone.com';
+
+  const val = id => (document.getElementById(id)?.value || '').trim();
+
+  function submitContact(e){
+    e.preventDefault();
+    let b = 'CONTACT — TOVEXA ONE CORP\n=========================\n\n';
+    b += 'Name: ' + val('c-name') + '\n';
+    if (val('c-company')) b += 'Company: ' + val('c-company') + '\n';
+    b += 'Email: ' + val('c-email') + '\n';
+    if (val('c-phone')) b += 'Phone: ' + val('c-phone') + '\n';
+    if (val('c-message')) b += '\nSourcing Needs:\n' + val('c-message') + '\n';
+    document.getElementById('contactSuccess').classList.add('show');
+    window.location.href = 'mailto:' + INBOX +
+      '?subject=' + encodeURIComponent('Wholesale Inquiry — Tovexa One Corp') +
+      '&body=' + encodeURIComponent(b);
+  }
+
   // close mobile menu on link click
   document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.links').classList.remove('open')));
 </script>
