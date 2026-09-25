@@ -1,4 +1,6 @@
-# Tovexa One Corp — Landing Page
+# tovexaone
+
+Tovexa One Corp — landing page.
 
 Single-page wholesale/sourcing site. No build step — `index.html` plus the `images/` folder.
 
